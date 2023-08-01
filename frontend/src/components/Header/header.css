@@ -7,6 +7,9 @@
 .logo img{
     width: 30%;
 }
+.menu {
+    margin-bottom: 0;
+}
 
 .nav_item a{
     text-decoration: none;
