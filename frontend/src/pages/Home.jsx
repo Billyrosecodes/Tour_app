@@ -18,7 +18,7 @@ const Home = () => {
             <Col lg="6">
               <div className="hero_content">
                 <div className="hero_subtitle d-flex align-items-center">
-                  <Subtitle Subtitle={"Know Before You Go"} />
+                  <Subtitle subtitle={"Know Before You Go"} />
                   <img src={worldImg} alt="" />
                 </div>
                 <h1>
