@@ -27,7 +27,7 @@ const SearchBar = () => {
           </FormGroup>
           <FormGroup className="d-flex gap-3 form_group form_group-last">
             <span>
-              <i class="ri-map-pin-line"></i>
+              <i class="ri-group-line"></i>
             </span>
             <div>
                 <h6>Max People</h6>
