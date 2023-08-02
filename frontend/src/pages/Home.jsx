@@ -66,7 +66,20 @@ const Home = () => {
                 <h5 className="services_subtitle">What we serve</h5>
                 <h2 className="services_title">We offer our best services</h2>
               </Col>
-              <ServiceList/>
+              <ServiceList />
+            </Row>
+          </Container>
+        </section>
+
+        {/* ====== featured tour section ======== */}
+
+        <section>
+          <Container>
+            <Row>
+              <Col lg="12" className="mb-5">
+                <Subtitle subtitle={"Explore"} />
+                <h2 className="featured_tour-title">Our featured tours</h2>
+              </Col>
             </Row>
           </Container>
         </section>
