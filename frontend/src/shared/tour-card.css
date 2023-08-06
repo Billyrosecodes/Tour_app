@@ -1,0 +1,26 @@
+.tour_img img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card{
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.tour_img{
+    position: relative;
+}
+
+.tour_img span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px 0 0 0;
+}
