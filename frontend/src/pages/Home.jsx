@@ -58,33 +58,69 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-        {/* ==== hero section ===== */}
+      {/* ==== hero section ===== */}
 
-        <section>
-          <Container>
-            <Row>
-              <Col lg='3'>
-                <h5 className="services_subtitle">What we serve</h5>
-                <h2 className="services_title">We offer our best services</h2>
-              </Col>
-              <ServiceList />
-            </Row>
-          </Container>
-        </section>
+      <section>
+        <Container>
+          <Row>
+            <Col lg="3">
+              <h5 className="services_subtitle">What we serve</h5>
+              <h2 className="services_title">We offer our best services</h2>
+            </Col>
+            <ServiceList />
+          </Row>
+        </Container>
+      </section>
 
-        {/* ====== featured tour section ======== */}
+      {/* ====== featured tour section ======== */}
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="mb-5">
+              <Subtitle subtitle={"Explore"} />
+              <h2 className="featured_tour-title">Our featured tours</h2>
+            </Col>
+            <FeaturedTourList />
+          </Row>
+        </Container>
+      </section>
 
-        <section>
-          <Container>
-            <Row>
-              <Col lg="12" className="mb-5">
-                <Subtitle subtitle={"Explore"} />
-                <h2 className="featured_tour-title">Our featured tours</h2>
-              </Col>
-              <FeaturedTourList/>
-            </Row>
-          </Container>
-        </section>
+      {/* ====== Experience section ======== */}
+      <section>
+        <Container>
+          <Row>
+            <Col lg="6">
+              <div className="experience_content">
+                <Subtitle subtitle={"Experience"} />
+
+                <h2>
+                  With our comprehensive experience <br /> we will serve you
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
+                  <br />
+                  repellendus animi inventore dolor iste ex.
+                </p>
+              </div>
+              <div className="counter_wrapper d-flex align-items-center gap-5">
+                <div className="counter_box">
+                  <span>15k+</span>
+                  <h6>Successful Trips</h6>
+                </div>
+                <div className="counter_box">
+                  <span>1k+</span>
+                  <h6>Regular clients</h6>
+                </div>
+                <div className="counter_box">
+                  <span>20</span>
+                  <h6>Years experience</h6>
+                </div>
+              </div>
+            </Col>
+            <Col lg="6"></Col>
+          </Row>
+        </Container>
+      </section>
     </>
   );
 };
