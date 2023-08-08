@@ -126,6 +126,18 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+       {/* ================ gallery section start========== */}
+       <section>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <Subtitle subtitle={'Gallery'}/>
+              <h2 className="gallery_title">Visit our customers tour gallery</h2>
+            </Col>
+          </Row>
+        </Container>
+       </section>
     </>
   );
 };
