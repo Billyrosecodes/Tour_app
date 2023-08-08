@@ -90,3 +90,7 @@
     margin-top: 0.7rem;
     color: var(--text-color);
 }
+
+.experience_img img{
+    width: 90%;
+}
