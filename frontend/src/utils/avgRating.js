@@ -5,7 +5,7 @@ const calculateAvgRating = (reviews) => {
       ? ""
       : totalRating === 1
       ? totalRating
-      : totalRating / reviews?.length;
+      : (totalRating / reviews?.length).toFixed(1);
 
   return {
     totalRating,
