@@ -64,6 +64,30 @@ const Footer = () => {
               </div>
             </div>
           </Col>
+
+          <Col lg='3'>
+            <h5 className="footer_link-title">Discover</h5>
+
+            <ListGroup className="footer_quick-links">
+              {quick_links.map((item, index) => (
+                <ListGroupItem key={index} className="ps-0 border-0">
+                  <Link to={item.path}>{item.display}</Link>
+                </ListGroupItem>
+              ))}
+            </ListGroup>
+          </Col>
+          <Col lg='3'>
+            <h5 className="footer_link-title">Quick Links</h5>
+
+            <ListGroup className="footer_quick-links">
+              {quick_links2.map((item, index) => (
+                <ListGroupItem key={index} className="ps-0 border-0">
+                  <Link to={item.path}>{item.display}</Link>
+                </ListGroupItem>
+              ))}
+            </ListGroup>
+          </Col>
+          <Col lg='3'></Col>
         </Row>
       </Container>
     </footer>
