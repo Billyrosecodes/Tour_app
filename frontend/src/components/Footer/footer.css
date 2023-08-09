@@ -28,3 +28,9 @@
   color: var(--text-color);
   font-size: 1.1rem;
 }
+
+.footer_quick-links h6 span i {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+

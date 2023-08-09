@@ -36,6 +36,9 @@ const quick_links2 = [
 ];
 
 const Footer = () => {
+
+  const year = new Date().getFullYear()
+
   return (
     <footer className="footer">
       <Container>
@@ -123,8 +126,11 @@ const Footer = () => {
 
                   <p className="mb-0">+2348100031188</p>
                 </ListGroupItem>
-             
             </ListGroup>
+          </Col>
+
+          <Col lg='12' className="text-center pt-5">
+            <p className="copyright">Copyright {year}, design and developed by Adeyemi Tolulope. All rights reserved.</p>
           </Col>
         </Row>
       </Container>
