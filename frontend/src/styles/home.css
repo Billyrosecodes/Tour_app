@@ -100,6 +100,11 @@
     margin-bottom: 2.5rem;
     margin-top: 1rem;
 }
-.mason_img:hover{
-    transform: scale(1.1);
+
+.masonry_img{
+    transition: .3s
+}
+
+.masonry_img:hover{
+   transform: scale(1.1);
 }

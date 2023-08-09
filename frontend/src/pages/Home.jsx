@@ -138,8 +138,20 @@ const Home = () => {
                 Visit our customers tour gallery
               </h2>
             </Col>
-            <Col lg='12'>
-             <MasonryImagesGallery />
+            <Col lg="12">
+              <MasonryImagesGallery />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/*======== Testimonial section  =========== */}
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <Subtitle subtitle={"Fans Love"} />
+              <h2 className="testimonial_title">What our fans say about us</h2>
             </Col>
           </Row>
         </Container>
