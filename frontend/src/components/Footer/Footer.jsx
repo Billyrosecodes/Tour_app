@@ -50,22 +50,30 @@ const Footer = () => {
 
               <div className="social_links d-flex align-items-center gap-4">
                 <span>
-                  <Link to="#"><i class='ri-youtube-line'></i></Link>
+                  <Link to="#">
+                    <i class="ri-youtube-line"></i>
+                  </Link>
                 </span>
                 <span>
-                  <Link to="#"><i class='ri-github-fill'></i></Link>
+                  <Link to="#">
+                    <i class="ri-github-fill"></i>
+                  </Link>
                 </span>
                 <span>
-                  <Link to="#"><i class='ri-facebook-circle-line'></i></Link>
+                  <Link to="#">
+                    <i class="ri-facebook-circle-line"></i>
+                  </Link>
                 </span>
                 <span>
-                  <Link to="#"><i class='ri-instagram-line'></i></Link>
+                  <Link to="#">
+                    <i class="ri-instagram-line"></i>
+                  </Link>
                 </span>
               </div>
             </div>
           </Col>
 
-          <Col lg='3'>
+          <Col lg="3">
             <h5 className="footer_link-title">Discover</h5>
 
             <ListGroup className="footer_quick-links">
@@ -76,7 +84,7 @@ const Footer = () => {
               ))}
             </ListGroup>
           </Col>
-          <Col lg='3'>
+          <Col lg="3">
             <h5 className="footer_link-title">Quick Links</h5>
 
             <ListGroup className="footer_quick-links">
@@ -87,7 +95,37 @@ const Footer = () => {
               ))}
             </ListGroup>
           </Col>
-          <Col lg='3'></Col>
+          <Col lg="3">
+            <h5 className="footer_link-title">Contact</h5>
+
+            <ListGroup className="footer_quick-links">
+                <ListGroupItem  className="ps-0 border-0 d-flex align-items-center gap-3">
+                  <h6 className="mb-0 d-flex align-items-center gap-2">
+                    <span><i class="ri-map-pin-line"></i></span>
+                    Address:
+                  </h6>
+
+                  <p className="mb-0">Abuja, Nigeria</p>
+                </ListGroupItem>
+                <ListGroupItem  className="ps-0 border-0 d-flex align-items-center gap-3">
+                  <h6 className="mb-0 d-flex align-items-center gap-2">
+                    <span><i class="ri-mail-line"></i></span>
+                    Email:
+                  </h6>
+
+                  <p className="mb-0">tolulopeadeyemi2020@gmail.com</p>
+                </ListGroupItem>
+                <ListGroupItem  className="ps-0 border-0 d-flex align-items-center gap-3">
+                  <h6 className="mb-0 d-flex align-items-center gap-2">
+                    <span><i class="ri-phone-fill"></i></span>
+                    Phone:
+                  </h6>
+
+                  <p className="mb-0">+2348100031188</p>
+                </ListGroupItem>
+             
+            </ListGroup>
+          </Col>
         </Row>
       </Container>
     </footer>
