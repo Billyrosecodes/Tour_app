@@ -52,6 +52,7 @@ const Tours = () => {
           </Row>
         </Container>
       </section>
+      <Newsletter/>
     </>
   );
 };
