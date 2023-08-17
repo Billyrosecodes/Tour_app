@@ -34,3 +34,14 @@
     margin-top: 1rem;
     margin-bottom: 2.5rem;
 }
+
+.tour_info h5{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.tour_info p{
+    line-height: 30px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
