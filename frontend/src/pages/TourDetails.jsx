@@ -29,7 +29,7 @@ const TourDetails = () => {
 
                   <div className="d-flex align-items-center gap-1">
                     <span className="tour_rating d-flex align-items-center gap-1">
-                      <i class="ri-star-fill"></i>{" "}
+                      <i class="ri-star-fill" style={{ color: "var(--secondary-color)" }}></i>
                       {calculateAvgRating === 0 ? null : avgRating}
                       {totalRating === 0 ? (
                         "Not Rated"
@@ -37,7 +37,25 @@ const TourDetails = () => {
                         <span>({reviews.length})</span>
                       )}
                     </span>
+
+                    <span>
+                        <i class="ri-map-pin-user-fill"></i>{address}
+                    </span>
                   </div>
+
+                  <div className="tour_extra-details">
+                    <span>
+                      <i className="ri-map-pin-2-line"></i>{city}
+                    </span>
+                    <span>
+                      <i className="ri-money-dollar-circle-line"></i>{price} /per person
+                    </span>
+                    <span>
+                      <i className="ri-group-line"></i>{maxGroupSize}
+                    </span>
+                  </div>
+                  <h5>Description</h5>
+                  <p>{desc}</p>
                 </div>
               </div>
             </Col>
