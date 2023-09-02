@@ -97,6 +97,14 @@ const TourDetails = () => {
                       5<i class="ri-star-s-fill"></i>
                     </span>
                   </div>
+
+                  <div className="review_input">
+                    <input type="text" placeholder="share your thoughts" />
+                    <button className="btn primary_btn text-white" type="submit"
+                    >
+                      Submit
+                    </button>
+                  </div>
                 </Form>
               </div>
             </Col>
