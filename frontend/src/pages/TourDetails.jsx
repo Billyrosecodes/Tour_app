@@ -24,7 +24,12 @@ const TourDetails = () => {
     distance,
     maxGroupSize,
   } = tour;
+
   const { totalRating, avgRating } = calculateAvgRating(reviews);
+
+  // format date
+  const options = { day: "numeric", month: "long", year: "numeric" };
+
   return (
     <>
       <section>
@@ -107,6 +112,27 @@ const TourDetails = () => {
                     </button>
                   </div>
                 </Form>
+
+{/* make use of the New date method to pin the date to the local time */}
+
+                <ListGroup className="user_reviews">
+                   {reviews?.map(review => (
+                    <div className="review_item">
+                      <img src={avatar} alt="avatar" />
+
+                      <div className="w-100">
+                        <div className="d-flex align-items-center justify-content-between">
+                           <div>
+                            <h5>Tolu</h5>
+                            <p>
+                              {new Date("09-02-2023").toLocaleDateString("en-US", options )}
+                            </p>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                   ))}
+                </ListGroup>
               </div>
             </Col>
           </Row>
