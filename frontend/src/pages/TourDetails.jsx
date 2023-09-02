@@ -48,7 +48,7 @@ const TourDetails = () => {
                       <i className="ri-map-pin-2-line"></i>{city}
                     </span>
                     <span>
-                      <i className="ri-money-dollar-circle-line"></i>{price} /per person
+                      <i className="ri-money-dollar-circle-line"></i>${price} /per person
                     </span>
                     <span>
                       <i className="ri-group-line"></i>{maxGroupSize}
@@ -56,6 +56,11 @@ const TourDetails = () => {
                   </div>
                   <h5>Description</h5>
                   <p>{desc}</p>
+                </div>
+
+                {/* ============  tour reviews section   ========== */}
+                <div className="tour_reviews mt-4">
+                  <h4>Reviews ({reviews?.length} reviews)</h4>
                 </div>
               </div>
             </Col>
