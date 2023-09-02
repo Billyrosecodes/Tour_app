@@ -11,10 +11,19 @@ const TourDetails = () => {
   //This is data static data later we call our API and load data from DB
   const tour = tourData.find((tour) => tour.id == id);
 
-  //destructure propeeties from tour object
-  const { photo, title, desc, price, address, reviews, city, distance, maxGroupSize } =
-    tour;
-  const {totalRating, avgRating} = calculateAvgRating(reviews)
+  //destructure properties from tour object
+  const {
+    photo,
+    title,
+    desc,
+    price,
+    address,
+    reviews,
+    city,
+    distance,
+    maxGroupSize,
+  } = tour;
+  const { totalRating, avgRating } = calculateAvgRating(reviews);
   return (
     <>
       <section>
@@ -29,7 +38,10 @@ const TourDetails = () => {
 
                   <div className="d-flex align-items-center gap-1">
                     <span className="tour_rating d-flex align-items-center gap-1">
-                      <i class="ri-star-fill" style={{ color: "var(--secondary-color)" }}></i>
+                      <i
+                        class="ri-star-fill"
+                        style={{ color: "var(--secondary-color)" }}
+                      ></i>
                       {calculateAvgRating === 0 ? null : avgRating}
                       {totalRating === 0 ? (
                         "Not Rated"
@@ -39,19 +51,23 @@ const TourDetails = () => {
                     </span>
 
                     <span>
-                        <i class="ri-map-pin-user-fill"></i>{address}
+                      <i class="ri-map-pin-user-fill"></i>
+                      {address}
                     </span>
                   </div>
 
                   <div className="tour_extra-details">
                     <span>
-                      <i className="ri-map-pin-2-line"></i>{city}
+                      <i className="ri-map-pin-2-line"></i>
+                      {city}
                     </span>
                     <span>
-                      <i className="ri-money-dollar-circle-line"></i>${price} /per person
+                      <i className="ri-money-dollar-circle-line"></i>${price}{" "}
+                      /per person
                     </span>
                     <span>
-                      <i className="ri-group-line"></i>{maxGroupSize}
+                      <i className="ri-group-line"></i>
+                      {maxGroupSize}
                     </span>
                   </div>
                   <h5>Description</h5>
@@ -62,6 +78,26 @@ const TourDetails = () => {
                 <div className="tour_reviews mt-4">
                   <h4>Reviews ({reviews?.length} reviews)</h4>
                 </div>
+
+                <Form>
+                  <div className="d-flex align-items-center gap-3 mb-4 rating_group">
+                    <span>
+                      1<i class="ri-star-s-fill"></i>
+                    </span>
+                    <span>
+                      2 <i class="ri-star-s-fill"></i>
+                    </span>
+                    <span>
+                      3 <i class="ri-star-s-fill"></i>
+                    </span>
+                    <span>
+                      4<i class="ri-star-s-fill"></i>
+                    </span>
+                    <span>
+                      5<i class="ri-star-s-fill"></i>
+                    </span>
+                  </div>
+                </Form>
               </div>
             </Col>
           </Row>
