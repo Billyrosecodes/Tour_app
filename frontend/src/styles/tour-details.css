@@ -54,3 +54,27 @@
     color: var(--secondary-color);
     cursor: pointer;
 }
+
+.tour_reviews h4{
+    margin-bottom: 3rem;
+}
+
+.review_input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    border: 1px solid var(--secondary-color);
+}
+
+.review_input input{
+    width: 100%;
+    padding: 0.5rem 0;
+    border: none;
+}
+
+.review_input input:focus {
+    outline: none;
+}
