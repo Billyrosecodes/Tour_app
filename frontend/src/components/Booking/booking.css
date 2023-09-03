@@ -22,6 +22,33 @@
 }
 
 .booking_top{
-    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.booking_form{
+    padding-top: 2rem;
+}
+
+.booking_form h5{
+    margin-bottom: 1rem;
+}
+
+.booking_form input{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: .5rem;
+    color: var(--heading-color);
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.booking_form input:focus{
+    outline: none;
+}
+
+.booking_info-form{
+    padding: 1rem;
+    border: 1px solid rgb(229, 231, 235);
 }
