@@ -61,7 +61,7 @@ const TourDetails = () => {
                         class="ri-star-fill"
                         style={{ color: "var(--secondary-color)" }}
                       ></i>
-                      {calculateAvgRating === 0 ? null : avgRating}
+                      {avgRating === 0 ? null : avgRating}
                       {totalRating === 0 ? (
                         "Not Rated"
                       ) : (
@@ -166,7 +166,7 @@ const TourDetails = () => {
             </Col>
 
             <Col lg="4">
-               <Booking tour={tour}/>
+               <Booking tour={tour} avgRating={avgRating}/>
             </Col>
           </Row>
         </Container>
