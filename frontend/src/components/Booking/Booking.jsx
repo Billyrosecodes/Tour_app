@@ -2,8 +2,10 @@ import React from "react";
 import "./booking.css";
 import { Form, FormGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
 
-const Booking = ({ tour, reviews }) => {
+const Booking = ({ tour, avgRating }) => {
   const { price, reviews } = tour;
+
+  const handleChange = e => {};
 
   return (
     <div className="booking">
@@ -20,16 +22,19 @@ const Booking = ({ tour, reviews }) => {
       {/* ========= Booking form========= */}
 
       <div className="booking_form">
+      <h5>Information</h5>
+      <Form className="booking_info-form">
         <FormGroup>
             <input type="text" placeholder="Full Name" id="fullname" required onChange={handleChange} />
         </FormGroup>
         <FormGroup>
             <input type="number" placeholder="Phone" id="phone" required onChange={handleChange} />
         </FormGroup>
-        <FormGroup>
+        <FormGroup className="d-flex align-items-center gap-3">
             <input type="date" placeholder="" id="bookAt" required onChange={handleChange} />
-            <input type="number" placeholder="" id="guestSize" required onChange={handleChange} />
+            <input type="number" placeholder="Guest" id="guestSize" required onChange={handleChange} />
         </FormGroup>
+        </Form>
       </div>
     </div>
   );
