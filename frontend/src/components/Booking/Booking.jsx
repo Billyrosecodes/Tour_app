@@ -1,9 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import "./booking.css";
 import { Form, FormGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
 
 const Booking = ({ tour, avgRating }) => {
   const { price, reviews } = tour;
+
+  const [credentials, setCredentials] = useState({
+    userId: "01", //to be made dynamic
+    userEmail: 'example@gmail.com',
+    fullName: '',
+    phone: '',
+    guestSize: 1,
+    bookAt: ''
+  })
 
   const handleChange = e => {};
 
