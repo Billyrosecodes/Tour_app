@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
 import {Link} from 'react-router-dom';
 import '../styles/login.css';
@@ -8,6 +8,21 @@ import userIcon from '../assets/images/user.png';
 
 
 const Login = () => {
+
+  const [credentials, setCredentials] = useState({
+   email:undefined,
+   password: undefined
+  });
+
+  const handleChange = (e) => {
+    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  const handleClick = e => {
+    e.preventDefault();
+  }
+
+
   return <section>
     <Container>
       <Row>
