@@ -14,7 +14,7 @@ const Booking = ({ tour, avgRating }) => {
     fullName: "",
     phone: "",
     guestSize: 1,
-    bookAt: "",
+    bookAt: ""
   });
 
   const handleChange = (e) => {
@@ -39,7 +39,7 @@ const Booking = ({ tour, avgRating }) => {
           ${price} <span>/per person</span>
         </h3>
         <span className="tour_rating d-flex align-items-center">
-          <i class="ri-star-fill"></i>
+          <i class="ri-star-s-fill"></i>
           {avgRating === 0 ? null : avgRating} ({reviews?.length})
         </span>
       </div>

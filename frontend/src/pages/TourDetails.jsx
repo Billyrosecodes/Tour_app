@@ -11,11 +11,11 @@ import Booking from "../components/Booking/Booking";
 
 const TourDetails = () => {
   const { id } = useParams();
-  const reviewsMsgRef = useRef("");
+  const reviewMsgRef = useRef("");
   const [tourRating, setTourRating] = useState(null);
 
   //This is data static data later we call our API and load data from DB
-  const tour = tourData.find((tour) => tour.id == id);
+  const tour = tourData.find(tour => tour.id === id);
 
   //destructure properties from tour object
   const {
@@ -36,11 +36,11 @@ const TourDetails = () => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   //submit request to the server
-  const submitHandler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
-    const reviewText = reviewsMsgRef.current.value;
+    const reviewText = reviewMsgRef.current.value;
 
-    alert(`${reviewText}, ${tourRating}`);
+    // alert(`${reviewText}, ${tourRating}`);
 
     // later call Api
   };
@@ -57,7 +57,7 @@ const TourDetails = () => {
                 <div className="tour_info">
                   <h2>{title}</h2>
 
-                  <div className="d-flex align-items-center gap-1">
+                  <div className="d-flex align-items-center gap-5">
                     <span className="tour_rating d-flex align-items-center gap-1">
                       <i
                         class="ri-star-fill"
@@ -67,7 +67,7 @@ const TourDetails = () => {
                       {totalRating === 0 ? (
                         "Not Rated"
                       ) : (
-                        <span>({reviews.length})</span>
+                        <span>({reviews?.length})</span>
                       )}
                     </span>
 
@@ -81,14 +81,14 @@ const TourDetails = () => {
                       <i className="ri-map-pin-2-line"></i> {city}
                     </span>
                     <span>
-                      <i className="ri-money-dollar-circle-line"></i> ${price}{" "}
+                      <i className="ri-money-dollar-circle-line"></i> ${price}
                       /per person
                     </span>
                     <span>
                       <i className="ri-map-pin-time-line"></i> {distance} k/m
                     </span>
                     <span>
-                      <i className="ri-group-line"></i> {maxGroupSize}
+                      <i className="ri-group-line"></i> {maxGroupSize} people
                     </span>
                   </div>
                   <h5>Description</h5>
@@ -103,7 +103,7 @@ const TourDetails = () => {
                 <Form onSubmit={submitHandler}>
                   <div className="d-flex align-items-center gap-3 mb-4 rating_group">
                     <span onClick={() => setTourRating(1)}>
-                      1<i class="ri-star-s-fill"></i>
+                      1 <i class="ri-star-s-fill"></i>
                     </span>
                     <span onClick={() => setTourRating(2)}>
                       2 <i class="ri-star-s-fill"></i>
@@ -112,17 +112,17 @@ const TourDetails = () => {
                       3 <i class="ri-star-s-fill"></i>
                     </span>
                     <span onClick={() => setTourRating(4)}>
-                      4<i class="ri-star-s-fill"></i>
+                      4 <i class="ri-star-s-fill"></i>
                     </span>
                     <span onClick={() => setTourRating(5)}>
-                      5<i class="ri-star-s-fill"></i>
+                      5 <i class="ri-star-s-fill"></i>
                     </span>
                   </div>
 
                   <div className="review_input">
                     <input
                       type="text"
-                      ref={reviewsMsgRef}
+                      ref={reviewMsgRef}
                       placeholder="share your thoughts"
                       required
                     />
@@ -138,7 +138,7 @@ const TourDetails = () => {
                 {/* make use of the New date method to pin the date to the local time */}
 
                 <ListGroup className="user_reviews">
-                  {reviews?.map((review) => (
+                  {reviews?.map(review => (
                     <div className="review_item">
                       <img src={avatar} alt="avatar" />
 
@@ -173,7 +173,7 @@ const TourDetails = () => {
           </Row>
         </Container>
       </section>
-      <Newsletter/>
+      {/* <Newsletter/> */}
     </>
   );
 };

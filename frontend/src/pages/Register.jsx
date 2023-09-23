@@ -66,7 +66,7 @@ const Register = () => {
                     />
                   </FormGroup>
                   <Button className="btn secondary_btn auth_btn" type="submit">
-                    Login
+                    Create Account
                   </Button>
                 </Form>
                 <p>
