@@ -1,4 +1,4 @@
-import Tour from '../models/Tour'
+import Tour from '../models/Tour.js'
 
 
 //create a new tour
