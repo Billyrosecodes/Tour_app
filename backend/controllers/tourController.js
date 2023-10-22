@@ -19,3 +19,36 @@ export const createTour = async (req, res) => {
       .json({ success: false, message: "Failed to create. Try again" });
   }
 };
+
+//update tour
+export const updateTour = async (req, res) => {
+    try {
+        
+    } catch (err) {
+        
+    }
+}
+//delete tour
+export const updateTour = async (req, res) => {
+    try {
+        
+    } catch (err) {
+        
+    }
+}
+//getSingle tour
+export const updateTour = async (req, res) => {
+    try {
+        
+    } catch (err) {
+        
+    }
+}
+//getAll tour
+export const updateTour = async (req, res) => {
+    try {
+        
+    } catch (err) {
+        
+    }
+}
