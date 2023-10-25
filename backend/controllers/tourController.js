@@ -152,8 +152,10 @@ try {
 // get tour counts
 export const getTourCount = async(req, res) => {
   try {
-    
+    const tourCount = await Tour.estimatedDocumentCount();
+
+    res.status(200).json({ sucess: true, data: tourCount });
   } catch (err) {
-    
+    res.status(500).json({ success: false, message: "failed to fetch"})
   }
 }
