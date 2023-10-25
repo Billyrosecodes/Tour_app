@@ -29,6 +29,24 @@ export const register = async (req, res) => {
 
 // user login
 export const login = async (req, res) => {
+
+    const email = req.body.email
+
   try {
+
+    const user = await User.findOne({email})
+
+    // if user doesnt exist
+    if(!user){
+        return res.status(404).json({success:false, message: 'User not found'})
+    }
+
+    //if user is existing then check the password or compare the password
+    const checkCorrectPassword = bcrypt.compare(req.body.password, user.password)
+
+    //if password is incorrect
+    if(!checkCorrectPassword){
+        return res.status(401)
+    }
   } catch (err) {}
 };
