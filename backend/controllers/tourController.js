@@ -148,3 +148,12 @@ try {
   });
 }
 };
+
+// get tour counts
+export const getTourCount = async(req, res) => {
+  try {
+    
+  } catch (err) {
+    
+  }
+}
