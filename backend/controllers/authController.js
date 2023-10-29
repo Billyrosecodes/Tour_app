@@ -41,7 +41,7 @@ export const login = async (req, res) => {
     }
 
     //if user is existing then check the password or compare the password
-    const checkCorrectPassword = bcrypt.compare(
+    const checkCorrectPassword = await bcrypt.compare(
       req.body.password,
       user.password
     );
