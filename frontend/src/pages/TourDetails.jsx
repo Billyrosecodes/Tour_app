@@ -1,21 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/tour-details.css";
 import { Container, Row, Col, Form, ListGroup } from "reactstrap";
 import { useParams } from "react-router-dom";
-import tourData from "../assets/data/tours";
-import calculateAvgRating from "../utils/avgRating";
+import calculateAvgRating from "./../utils/avgRating";
 import avatar from "../assets/images/avatar.jpg";
 import Booking from "../components/Booking/Booking";
-
-
+import Newsletter from "./../shared/Newsletter";
+import useFetch from './../hooks/useFetch';
+import { BASE_URL } from "./../utils/config";
 
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef = useRef("");
   const [tourRating, setTourRating] = useState(null);
 
-  //This is data static data later we call our API and load data from DB
-  const tour = tourData.find(tour => tour.id === id);
+  // fetch data from database
+  const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
 
   //destructure properties from tour object
   const {
@@ -36,27 +36,29 @@ const TourDetails = () => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   //submit request to the server
-  const submitHandler = e => {
+  const submitHandler = (e) => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
 
-    // alert(`${reviewText}, ${tourRating}`);
-
-    // later call Api
+    // later will call api
   };
+ 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[tour])
 
   return (
     <>
       <section>
         <Container>
-          <Row>
+        {loading && <h4 className="text-center pt-5">Loading......</h4>}
+        {error && <h4 className="text-center pt-5">{error}</h4>}
+        {!loading && !error &&  <Row>
             <Col lg="8">
               <div className="tour_content">
                 <img src={photo} alt="" />
-
                 <div className="tour_info">
                   <h2>{title}</h2>
-
                   <div className="d-flex align-items-center gap-5">
                     <span className="tour_rating d-flex align-items-center gap-1">
                       <i
@@ -138,7 +140,7 @@ const TourDetails = () => {
                 {/* make use of the New date method to pin the date to the local time */}
 
                 <ListGroup className="user_reviews">
-                  {reviews?.map(review => (
+                  {reviews?.map((review) => (
                     <div className="review_item">
                       <img src={avatar} alt="avatar" />
 
@@ -156,7 +158,6 @@ const TourDetails = () => {
                           <span className="d-flex align-items-center">
                             5 <i className="ri-star-s-fill"></i>
                           </span>
-
                           <h6>Amazing tour</h6>
                         </div>
                       </div>
@@ -168,12 +169,13 @@ const TourDetails = () => {
             </Col>
 
             <Col lg="4">
-               <Booking tour={tour} avgRating={avgRating}/>
+              <Booking tour={tour} avgRating={avgRating} />
             </Col>
           </Row>
+        }
         </Container>
       </section>
-      {/* <Newsletter/> */}
+      <Newsletter />
     </>
   );
 };
