@@ -33,7 +33,7 @@ const Booking = ({ tour, avgRating }) => {
   //send data to the server
   const handleClick = async (e) => {
     e.preventDefault();
-console.log(booking)
+
     try {
       if (!user || user === undefined || user === null) {
         return alert("Please sign in");

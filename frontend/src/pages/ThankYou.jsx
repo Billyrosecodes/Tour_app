@@ -24,7 +24,6 @@ const ThankYou = () => {
         </Row>
       </Container>
     </section>
-    
   );
 };
 
