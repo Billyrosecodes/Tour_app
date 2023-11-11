@@ -132,6 +132,9 @@
   .testimonial_title, .experience_content h2 {
     font-size: 2rem;
   }
+  .experience_img{
+    margin-top: 2rem;
+  }
 }
 
 @media only screen and (max-width: 576px) {
