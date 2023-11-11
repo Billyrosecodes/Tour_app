@@ -44,14 +44,14 @@ const TourDetails = () => {
     const reviewText = reviewMsgRef.current.value;
 
    try {
-    if(!user || user === undefined || user ===null){
-      alert('Please sign in')
+    if(!user || user === undefined || user === null){
+      alert('Please sign in');
     }
 
     const reviewObj = {
       username: user?.username,
       reviewText,
-      rating: tourRating
+      rating: tourRating,
     }
 
     const res = await fetch(`${BASE_URL}/review/${id}`,{
@@ -93,7 +93,7 @@ const TourDetails = () => {
                   <div className="d-flex align-items-center gap-5">
                     <span className="tour_rating d-flex align-items-center gap-1">
                       <i
-                        class="ri-star-fill"
+                        class="ri-star-s-fill"
                         style={{ color: "var(--secondary-color)" }}
                       ></i>
                       {avgRating === 0 ? null : avgRating}
@@ -114,7 +114,7 @@ const TourDetails = () => {
                       <i className="ri-map-pin-2-line"></i> {city}
                     </span>
                     <span>
-                      <i className="ri-money-dollar-circle-line"></i> ${price}
+                      <i className="ri-money-dollar-circle-line"></i> ${price}{""}
                       /per person
                     </span>
                     <span>
